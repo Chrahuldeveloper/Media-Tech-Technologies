@@ -2,7 +2,7 @@ const images = [
   {
     image:
       "https://templatekit.jegtheme.com/creative1/wp-content/uploads/sites/43/2020/12/kilyan-sockalingum-FAlefSetxdQ-unsplash2.jpg",
-    Tittle: "Digital Strategy",
+    Tittle: "web designing    ",
   },
   {
     image:

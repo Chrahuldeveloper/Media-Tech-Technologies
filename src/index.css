@@ -11,6 +11,6 @@
     -webkit-backdrop-filter: blur(4px);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }

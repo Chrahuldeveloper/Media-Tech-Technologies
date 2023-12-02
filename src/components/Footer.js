@@ -15,10 +15,14 @@ export default function Footer({ Contactref }) {
     setistoogle(true);
   };
 
+  const Mail = () => {
+    window.location.href = "mailto:mediatechmarketing25@gmail.com";
+  };
+
   return (
     <>
       <div className="py-32" ref={Contactref}>
-        <div className="flex justify-center items-center space-x-5">
+        <div className="flex items-center justify-center space-x-5">
           <div className="border-2 rounded-full p-3 border-[#4ef0ed]">
             <AiOutlineInstagram size={28} color="white" cursor={"pointer"} />
           </div>
@@ -32,8 +36,8 @@ export default function Footer({ Contactref }) {
             <BsYoutube size={28} color="white" cursor={"pointer"} />
           </div>
         </div>
-        <div className="text-center my-8 space-y-10 text-white">
-          <h1 className=" text-2xl md:text-5xl font-bold">
+        <div className="my-8 space-y-10 text-center text-white">
+          <h1 className="text-2xl font-bold md:text-5xl">
             Have any project in mind?
           </h1>
           <button
@@ -45,38 +49,46 @@ export default function Footer({ Contactref }) {
         </div>
       </div>
       <div className="border-t-2 border-[#25c4c1] flex flex-col md:flex-row justify-center space-y-6 md:justify-evenly items-center">
-        <div className="text-white space-y-7 my-8 md:my-0 text-center md:text-left">
-          <h1 className="font-bold text-4xl md:text-5xl">digitai.in</h1>
-          <p className="md:text-lg">We are more than a digital agency</p>
+        <div className="my-8 text-center text-white space-y-7 md:my-0 md:text-left">
+          <h1 className="text-4xl font-bold md:text-5xl">MediaTech</h1>
+          <p className="font-semibold md:text-xl">Your Smarter Move</p>
           <div className="border-2 border-[#4ef0ed] w-[55vw] md:w-[10vw] "></div>
         </div>
         <div className="text-white">
-          <h1 className="text-lg font-semibold">OUR SERVICES</h1>
-          <ul className="space-y-5 my-5 text-center md:text-left">
+          <h1 className="text-lg font-bold">OUR SERVICES</h1>
+          <ul className="my-5 space-y-5 font-bold text-center md:text-left">
             <li className="flex space-x-4">
-              <p>Single Project</p>
+              <a href="https://www.wallahdigital.com/what-is-web-development/">
+                <p>Website development</p>
+              </a>
             </li>
             <li className="flex space-x-4">
-              <p>SERVICES1</p>
+              <a href="https://www.wallahdigital.com/seo-meaning/">
+                <p>SEO</p>
+              </a>
             </li>
             <li className="flex space-x-4">
-              <p>SERVICES2</p>
+              <a href="https://www.wallahdigital.com/what-is-social-media-marketing/">
+                <p>Social Media Marketing</p>
+              </a>
             </li>
             <li className="flex space-x-4">
-              <p>SERVICES3</p>
+              <a href="https://www.wallahdigital.com/digital-marketing/">
+                <p>Digital Marketing</p>
+              </a>
             </li>
           </ul>
         </div>
         <div className="text-white">
           <h1 className="text-lg font-semibold">CONTACT US</h1>
-          <ul className="space-y-5 my-5">
+          <ul className="my-5 space-y-5">
             <li className="flex space-x-4">
               <BiPhoneCall size={20} color="white" />
-              <p>+1234567890</p>
+              <p>9392895395</p>
             </li>
-            <li className="flex space-x-4">
+            <li onClick={Mail} className="flex space-x-4 cursor-pointer">
               <FiMail size={20} color="white" />
-              <p>anymail@mail.com</p>
+              <p>mediatechmarketing25@gmail.com</p>
             </li>
             <li className="flex space-x-4">
               <GoLocation size={20} color="white" />
@@ -84,7 +96,7 @@ export default function Footer({ Contactref }) {
             </li>
             <li className="flex space-x-4">
               <RiTaskFill size={20} color="white" />
-              <p>Monday to Friday</p>
+              <p>Monday to Saturday</p>
             </li>
           </ul>
         </div>

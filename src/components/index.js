@@ -9,6 +9,7 @@ import AboutCard from "./AboutCard";
 import TestimonialSection from "./TestimonialSection";
 import TestimonialCard from "./TestimonialCard";
 import Footer from "./Footer";
+import BlogPost from "./BlogPost";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   TestimonialSection,
   TestimonialCard,
   Footer,
+  BlogPost
 };

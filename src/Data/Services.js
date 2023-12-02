@@ -7,34 +7,34 @@ import { CiSaveUp1 } from "react-icons/ci";
 const Services = [
   {
     icon: <BsGraphUp size={40} color="#4ef0ed" />,
-    Tittle: "Digital Strategy",
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.",
+    Tittle: "SEO",
+    Para: "Optimizing your website for search engines, to increase your visibility.",
   },
   {
     icon: <BiPencil size={40} color="#4ef0ed" />,
-    Tittle: "UX Designs",
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.",
+    Tittle: "Social media marketing",
+    Para: "Showcase your brand, products, and services to a wider audience",
   },
   {
     icon: <BsGlobe2 size={40} color="black" />,
-    Tittle: "Ecommerce Website",
+    Tittle: "Website Development",
     light: true,
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.",
+    Para: "Through Website you can establish an online presence and reach a wider audience",
   },
   {
     icon: <VscGraph size={40} color="#4ef0ed" />,
-    Tittle: "Social Media",
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus. ",
+    Tittle: "Google ads",
+    Para: "Drive traffic and conversions through online targeted campaigns on Google",
   },
   {
     icon: <SlPeople size={40} color="#4ef0ed" />,
-    Tittle: "UI Designs",
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.",
+    Tittle: "Content Creation",
+    Para: "Creating high-quality content to attract and retain your target audience",
   },
   {
     icon: <CiSaveUp1 size={40} color="#4ef0ed" />,
-    Tittle: "Media Pairing",
-    Para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id arcu luctus.",
+    Tittle: "Branding your Product",
+    Para: "Creating a strong brand for your products to differentiate yourself from competitors",
   },
 ];
 

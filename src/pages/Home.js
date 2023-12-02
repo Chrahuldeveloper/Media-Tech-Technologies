@@ -2,7 +2,7 @@ import React from "react";
 import { HeroSection } from "../components/index";
 export default function Home() {
   return (
-    <div className="bg-black w-screen h-auto">
+    <div className="w-screen h-auto bg-black">
       <HeroSection />
     </div>
   );

@@ -14,23 +14,8 @@ export default function HeroSection() {
   const Aboutref = useRef();
   const Contactref = useRef();
 
-  const Scrolltoref = () => {
-    Serviceref.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-  const scrolltoWorks = () => {
-    Worksref.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-  const scrolltoAbout = () => {
-    Aboutref.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-  const scrolltoContact = () => {
-    Contactref.current.scrollIntoView({
+  const Scrolltoref = (section) => {
+    section.current.scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -38,10 +23,18 @@ export default function HeroSection() {
   return (
     <>
       <Banner
-        Scrolltoref={Scrolltoref}
-        scrolltoWorks={scrolltoWorks}
-        scrolltoAbout={scrolltoAbout}
-        scrolltoContact={scrolltoContact}
+        Scrolltoref={() => {
+          Scrolltoref(Serviceref);
+        }}
+        scrolltoWorks={() => {
+          Scrolltoref(Worksref);
+        }}
+        scrolltoAbout={() => {
+          Scrolltoref(Aboutref);
+        }}
+        scrolltoContact={() => {
+          Scrolltoref(Contactref);
+        }}
       />
       <Highlights />
       <ServicesSection Serviceref={Serviceref} />

@@ -1,53 +1,64 @@
 import React, { useEffect } from "react";
-import { Work } from "../Data/index";
 import AOS from "aos";
+import { collection } from "firebase/firestore";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { db } from "../Firebase";
 import "aos/dist/aos.css";
-export default function WorkSection({Worksref}) {
+import { Link } from "react-router-dom";
+export default function WorkSection({ Worksref }) {
+  const docref = collection(db, "OURWORKS");
+  const [values, loading, error] = useCollectionData(docref);
+
   useEffect(() => {
     AOS.init();
-  }, []);
+    if (loading) return;
+    console.log(error);
+  }, [loading, error]);
 
   return (
     <>
-      <div    
-      ref={Worksref}   
-      data-aos="slide-right"
+      <div
+        ref={Worksref}
+        data-aos="slide-right"
         data-aos-offset="200"
         data-aos-delay="70"
         data-aos-duration="1300"
-        data-aos-easing="ease-in-out" 
-        className="text-white text-center md:text-left md:mx-48 py-24 ">
+        data-aos-easing="ease-in-out"
+        className="py-24 text-center text-white md:text-left md:mx-48 "
+      >
         <div className="flex items-center justify-center md:justify-normal gap-x-6">
           <div className="border-2 border-[#4ef0ed] w-[3vw] hidden md:block" />
-          <h1 className="text-5xl md:text-6xl font-bold">Works.</h1>
+          <h1 className="text-5xl font-bold md:text-6xl">Works.</h1>
         </div>
         <p className="my-4  text-[#4ef0ed]">THINGS WE'VE MADE</p>
       </div>
-      <div className="flex items-center">
-        {Work.map((item) => {
+      <div className="grid grid-cols-3">
+        {values?.map((item, index) => {
           return (
-            <div
-              data-aos="zoom-in"
-              data-aos-offset="200"
-              data-aos-delay="70"
-              data-aos-duration="1300"
-              data-aos-easing="ease-in-out"
-              data-aos-once="false"
-              className="relative cursor-pointer"
-            >
-              <img
-                className="w-[16vw] md:w-[16vw] md:h-[50vh] h-[25vh] cursor-pointer"
-                src={item.image}
-                alt=""
-              />
-              <h1 class="opacity-0 hover:opacity-100 duration-500 absolute inset-0 z-10 flex justify-center items-center text-xs md:text-2xl text-white font-semibold">
-                {item.Tittle}
-              </h1>
-            </div>
+            <Link key={index} to={item.link}>
+              <div
+                data-aos="zoom-in"
+                data-aos-offset="200"
+                data-aos-delay="70"
+                data-aos-duration="1300"
+                data-aos-easing="ease-in-out"
+                data-aos-once="false"
+                className="relative cursor-pointer"
+              >
+                <img
+                  className="w-[50vw] cursor-pointer"
+                  src={item.image}
+                  alt="pic"
+                />
+                <h1 className="absolute inset-0 z-10 flex items-center justify-center text-xs font-semibold font-bold text-white duration-500 opacity-0 hover:opacity-100 md:text-2xl">
+                  {item.Tittle}
+                </h1>
+              </div>
+            </Link>
           );
         })}
       </div>
-      <div className="flex justify-center items-center py-12">
+      <div className="flex items-center justify-center py-12">
         <div className="border-2 border-[#4ef0ed]  w-[13vw] md:w-[5vw] rotate-90"></div>
       </div>
     </>
