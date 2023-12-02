@@ -15,15 +15,15 @@ export default function ServicesSection({ Serviceref }) {
         data-aos-delay="70"
         data-aos-duration="1300"
         data-aos-easing="ease-in-out"
-        className="text-white text-center md:text-left md:mx-48 py-24 "
+        className="py-24 text-center text-white md:text-left md:mx-48 "
       >
         <div className="flex items-center justify-center md:justify-normal gap-x-6">
           <div className="border-2 border-[#4ef0ed] w-[3vw] hidden md:block" />
-          <h1 className="text-5xl md:text-6xl  font-bold">Services.</h1>
+          <h1 className="text-5xl font-bold md:text-6xl">Services.</h1>
         </div>
         <p className="my-4  text-[#4ef0ed]">OUR SERVICES FOR CLIENTS</p>
       </div>
-      <div className="flex flex-col justify-center items-center -my-1.5 md:grid md:grid-cols-3 md:place-items-center md:px-36 gap-y-7 pb-4">
+      <div className="flex flex-col justify-center items-center -my-1.5 md:grid md:grid-cols-3 md:place-items-center md:px-8 gap-y-7 pb-4">
         {Services.map((item, index) => {
           return (
             <div
@@ -42,13 +42,13 @@ export default function ServicesSection({ Serviceref }) {
             `}
             >
               <div>{item.icon}</div>
-              <h1 className="text-2xl md:text-3xl font-bold">{item.Tittle}</h1>
+              <h1 className="text-2xl font-bold md:text-3xl">{item.Tittle}</h1>
               <p className="leading-8 md:max-w-[14vw]">{item.Para}</p>
             </div>
           );
         })}
       </div>
-      <div className="flex justify-center items-center py-9">
+      <div className="flex items-center justify-center py-9">
         <div className="border-2 border-[#4ef0ed]  w-[14vw] md:w-[5vw]  rotate-90"></div>
       </div>
     </div>

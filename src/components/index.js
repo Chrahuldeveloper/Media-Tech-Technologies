@@ -10,8 +10,10 @@ import TestimonialSection from "./TestimonialSection";
 import TestimonialCard from "./TestimonialCard";
 import Footer from "./Footer";
 import BlogPost from "./BlogPost";
+import CommercialWorkSection from "./CommercialWorkSection";
 
 export {
+  CommercialWorkSection,
   Navbar,
   HeroSection,
   Banner,

@@ -7,6 +7,7 @@ import {
   TestimonialSection,
   WorkSection,
   Footer,
+  CommercialWorkSection,
 } from "./index";
 export default function HeroSection() {
   const Serviceref = useRef();
@@ -39,6 +40,7 @@ export default function HeroSection() {
       <Highlights />
       <ServicesSection Serviceref={Serviceref} />
       <WorkSection Worksref={Worksref} />
+      <CommercialWorkSection  />
       <AboutSection Aboutref={Aboutref} />
       <TestimonialSection />
       <Footer Contactref={Contactref} />
