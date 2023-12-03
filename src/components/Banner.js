@@ -9,7 +9,7 @@ export default function Banner({
 }) {
   return (
     <>
-      <div className="background_image w-screen h-[85vh] md:h-[100vh]">
+      <div className="background_image  w-screen h-[85vh] md:h-[100vh]">
         <Navbar
           Scrolltoref={Scrolltoref}
           scrolltoWorks={scrolltoWorks}
