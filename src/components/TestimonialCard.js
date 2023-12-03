@@ -10,21 +10,21 @@ export default function TestimonialCard() {
   }, []);
 
   return (
-    <div className="flex mx-auto gap-x-5 -my-6 items-center md:justify-center overflow-x-scroll scroll-smooth md:overscroll-x-none max-w-[74vw] md:max-w-none">
-      {Reviews.map((item,index) => {
+    <div className="grid justify-center grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+      {Reviews.map((item, index) => {
         return (
           <div
-          key={index}
+            key={index}
             data-aos="fade"
             data-aos-offset="200"
             data-aos-delay="70"
             data-aos-duration="1300"
             data-aos-easing="ease-in-out"
             data-aos-once="false"
-            className="bg-[#0b0c10] text-center space-y-5 p-6 border-2 border-stone-800"
+            className="bg-[#0b0c10] max-w-xs md:max-w-sm text-center space-y-5 p-6 border-2 border-stone-800"
           >
             <TfiQuoteLeft className="mx-auto" size={30} color="#4ef0ed" />
-            <p className="leading-8 w-[60vw] md:max-w-[20vw] text-slate-300 text-sm">
+            <p className="text-sm leading-8 text-slate-300">
               {item.Para}
             </p>
             <div className="text-white space-y-2.5">
